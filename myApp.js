@@ -6,8 +6,7 @@ app.get('/', (req, res) => {
 });
 app.use('/public',express.static(__dirname+'/public'));
 app.get('/json',(req,res) => {
-const env=process.env.MESSAGE_STYLE;
-if(env=="uppercase"){
+if(process.env.MESSAGE_STYLE==="uppercase"){
 res.json({"message":"HELLO JSON"});
 }
 else{
